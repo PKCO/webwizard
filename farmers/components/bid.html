@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bid.css">
+    <title>Private Wheat Auction</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="https://goodineverygrain.ca/wp-content/uploads/2021/08/Question-3.png" alt="Wheat Image">
+        </div>
+        <div class="right-section">
+            <h1>Live Wheat Auction</h1>
+            <p>Product: 100 kg Wheat</p>
+            <p>Market Price: ₹49 per kg</p>
+            <p>Time Remaining: <span id="time" class="red-text">03:00</span></p>
+            
+<div id="liveBids">
+    <h2>Live Bids:</h2>
+    <ul id="liveBidsList"></ul>
+</div>
+
+            <p id="highestBid">Highest Bid: ₹0</p>
+            <form id="bidForm">
+                <label for="bidAmount">Your Bid:</label>
+                <input type="text" id="bidAmount" placeholder="Enter your bid">
+                <button type="button" id="placeBid">Place Bid</button>
+            </form>
+            <button type="button" id="payButton" disabled>Pay with Razorpay</button>
+        </div>
+    </div>
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">&larr; Back</a>
+    </div>
+
+    <script src="bid.js"></script>
+</body>
+</html>

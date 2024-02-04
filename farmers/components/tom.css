@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+padding: 0;
+font-family: 'Arial', sans-serif;
+background: url('https://email.agritecture.com/hubfs/Imported_Blog_Media/AR-200119620-4.jpg') no-repeat center center fixed;
+background-size: cover;
+color: #ffffff;
+}
+
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 100px auto;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-section img {
+width: 300px; /* Adjust the width as needed */
+margin-right: 20px;
+border-radius: 8px; /* Add border radius for a rounded appearance */
+}
+
+h1 {
+color: #ffd700;
+}
+
+form {
+margin-top: 20px;
+}
+
+label {
+display: block;
+margin-bottom: 10px;
+color: #eeecf0;
+}
+
+input {
+padding: 10px;
+margin-bottom: 10px;
+box-sizing: border-box;
+border: none;
+border-radius: 4px;
+}
+
+button {
+background-color: #4caf50;
+color: #fff;
+padding: 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.red-text {
+color: #e74c3c;
+}
+
+#payButton {
+background-color: #3498db;
+color: #fff;
+padding: 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+#payButton:disabled {
+background-color: #7f8c8d;
+cursor: not-allowed;
+}

@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(https://images5.alphacoders.com/111/1119534.jpg);
+    background-size: cover;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 440px;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Original background color */
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px #dfdddd;
+  }
+  
+  .form-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: white;
+    text-shadow: 2px 2px 2px #272525;
+    border-bottom: solid 1px #dcd5d5;
+  }
+  
+  .main-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .user-input-box:nth-child(2n) {
+    justify-content: flex-end;
+  }
+  
+  .user-input-box {
+    width: 75%;
+    padding-bottom: 15px;
+  }
+  
+  .user-input-box label {
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+  }
+  
+  .user-input {
+    width: 75%;
+  }
+  
+  .user-input-box input {
+    height: 40px;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #3f3cec;
+    padding: 0 10px;
+  }
+  
+  .user-input label {
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+  }
+  
+  .user-input input {
+    height: 40px;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #3f3cec;
+    padding: 0 10px;
+  }
+  
+  .form-submit-button {
+    margin-top: 40px;
+  }
+  
+  .login-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 255, 0.7);
+    /* Blue color */
+  }
+  
+  .login-btn:hover {
+    background: rgba(56, 204, 93, 0.9);
+}
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Your other styles for the body */
+}
+
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}

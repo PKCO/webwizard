@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Private Wheat Auction</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/tomatoes-1200x628-facebook-1200x628.jpg" alt="Tomato Image">
+        </div>
+        <div class="right-section">
+            <h1>Live Tomato Auction</h1>
+            <p>Product: 100 kg Tomato</p>
+            <p>Market Price: ₹52 per kg</p>
+            <p>Time Remaining: <span id="time" class="red-text">01:00</span></p>
+            
+<div id="liveBids">
+    <h2>Live Bids:</h2>
+    <ul id="liveBidsList"></ul>
+</div>
+
+            <p id="highestBid">Highest Bid: ₹0</p>
+            <form id="bidForm">
+                <label for="bidAmount">Your Bid:</label>
+                <input type="text" id="bidAmount" placeholder="Enter your bid">
+                <button type="button" id="placeBid">Place Bid</button>
+            </form>
+            <button type="button" id="payButton" disabled>Pay with Razorpay</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

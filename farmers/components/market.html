@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2018/08/24/23/33/field-3629120_640.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(23, 8, 8);
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .auction-section {
+            margin: 20px;
+        }
+
+        .auction-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .auction-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .live-auction {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .live-auction:hover {
+            background-color: #45a049;
+        }
+
+        .yet-to-start,
+        .completed {
+            background-color: #808080;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: not-allowed;
+        }
+        .back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Auction Platform</h1>
+    </header>
+
+    <div class="auction-section">
+        <h2>Live Auctions</h2>
+        <div class="auction-container">
+            <div class="auction-card">
+                <h3>Wheat Auction</h3>
+                <button class="live-auction" onclick="startAuction('wheat', 120)">Join Auction</button>
+            </div>
+
+            <div class="auction-card">
+                <h3>Tomato Auction</h3>
+                <button class="live-auction" onclick="startAuction('tomato', 120)">Join Auction</button>
+            </div>
+
+            <div class="auction-card">
+                <h3>Banana Auction</h3>
+                <button class="live-auction" onclick="startAuction('banana', 120)">Join Auction</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auction-section">
+        <h2>Yet to Start Auctions</h2>
+        <div class="auction-container">
+            <div class="auction-card">
+                <h3>Rice Auction</h3>
+                <button class="yet-to-start" disabled id="yetToStartBtn">Yet to Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auction-section">
+        <h2>Completed Auctions</h2>
+        <div class="auction-container">
+            <div class="auction-card">
+                <h3>Carrot Auction</h3>
+                <button class="completed" disabled>Completed</button>
+            </div>
+        </div>
+    </div>
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">&larr; Back</a>
+    </div>
+    <script>
+      function startAuction(product, durationInSeconds) {
+    alert(`Redirecting to Live Auction - ${product}`);
+  
+    const startTime = new Date().getTime();
+    const endTime = startTime + durationInSeconds * 1000;
+
+    const liveAuctionButton = document.querySelector('.live-auction');
+    updateLiveTimer(liveAuctionButton, endTime);
+
+    setTimeout(() => {
+        liveAuctionButton.disabled = true;
+    }, durationInSeconds * 1000);
+}
+
+function updateLiveTimer(button, endTime) {
+    const timerInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const remainingTime = endTime - now;
+
+        if (remainingTime <= 0) {
+            clearInterval(timerInterval);
+            button.innerHTML = "Auction Completed";
+        } else {
+            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            button.innerHTML = `Time Remaining: ${minutes}m ${seconds}s`;
+        }
+    }, 1000);
+}
+
+    </script>
+</body>
+
+</html>

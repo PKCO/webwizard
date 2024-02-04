@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2022/05/05/23/12/agriculture-7177221_640.jpg') center/cover no-repeat;
+  }
+  
+  .container {
+    background-color: rgba(135, 133, 133, 0.8); /* Increased opacity for better readability */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    overflow: auto; /* Ensures smooth scrolling */
+    max-height: 90vh; /* Adjusted to ensure the form doesn't extend beyond the viewport */
+    width: 350px; /* Adjusted width to accommodate new fields */
+    padding: 20px;
+    margin: 20px; /* Adds some space around the container */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px; /* Ensures consistent spacing above labels */
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  textarea,
+  select {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 16px); /* Ensures inputs do not overflow their container */
+  }
+  .back-button-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #2980b9;
+  }
+  textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 100px; /* Default height */
+  }
+  
+  button {
+    background-color: #34ce20;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Ensures consistent spacing above the button */
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
